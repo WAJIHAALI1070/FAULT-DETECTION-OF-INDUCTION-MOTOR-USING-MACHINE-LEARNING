@@ -38,13 +38,3 @@ This project focuses on detecting faults in an induction motor using machine lea
    - **Description**: Winding faults involve issues such as short circuits, open circuits, or insulation breakdown in the motor windings.
    - **Impact**: These faults can lead to irregular motor operation, overheating, increased electrical current consumption, and potential damage to other motor components.
 
-
-## Contents
-- `MATLAB/`: Contains MATLAB scripts for signal processing and fault detection.
-- `Python/`: Includes Python scripts for machine learning model development and data analysis.
-- `Data/`: Directory for storing datasets used in the project.
-- `Documentation/`: Additional project documentation, including research papers or technical reports.
-- `Results/`: Folder containing results and analysis summaries.
-
-## Usage
-1. Clone the repository:
