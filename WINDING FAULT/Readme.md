@@ -72,12 +72,12 @@ Here, data is the new dataset on which predictions are to be made. The output yf
 + Export the trained KNN model to the workspace.
 + Use the provided code to make predictions on new data.
 ### Files
-+ shorted_turns_fault.csv: Data for shorted turns faults.
-+ normal_winding.csv: Data for normal winding conditions.
-+ open_circuit_fault.csv: Data for open circuit faults.
-+ inter_turn_fault_1.csv: Data for inter-turn faults (test 1).
-+ inter_turn_fault_2.csv: Data for inter-turn faults (test 2).
-+ Test_Data.csv: New data for prediction.
++ `shorted_turns_fault.csv`: Data for shorted turns faults.
++ `normal_winding.csv`: Data for normal winding conditions.
++ `open_circuit_fault.csv`: Data for open circuit faults.
++ `inter_turn_fault_1.csv`: Data for inter-turn faults (test 1).
++ `inter_turn_fault_2.csv`: Data for inter-turn faults (test 2).
++ `Test_Data.csv`: New data for prediction.
 ### Requirements
 - MATLAB with the Statistics and Machine Learning Toolbox.
 - CSV files containing the winding fault data.
