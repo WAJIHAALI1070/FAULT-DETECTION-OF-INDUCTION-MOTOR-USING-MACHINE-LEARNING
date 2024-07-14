@@ -45,11 +45,41 @@ Winding faults are common issues in electric motors and can severely impact thei
 
 The first step is to import the CSV files containing the winding fault data into MATLAB and merge them into a single table.
 
-```matlab
+```matlab 
 data1 = readtable('D:\EM_Project\shorted_turns_fault.csv');  % Read the CSV file
 data2 = readtable('D:\EM_Project\normal_winding.csv');  % Read the CSV file
 data3 = readtable('D:\EM_Project\open_circuit_fault.csv');  % Read the CSV file
 data4 = readtable('D:\EM_Project\inter_turn_fault_1.csv');  % Read the CSV file
 data5 = readtable('D:\EM_Project\inter_turn_fault_2.csv');  % Read the CSV file
 merged_table = vertcat(data1, data5, data4, data3, data2); 
+```
 
+### Model Training
+The merged data table is then used to train a classification model using MATLAB's Classification Learner app. During this process, various models are tested, and the KNN model is found to offer the highest accuracy. The trained KNN model is exported to the MATLAB workspace as KNN_Model.
+
+### Model Prediction
+To make predictions on new data using the trained KNN model, the following commands are used:
+
+```matlab
+data = readtable('D:\EM_Project\Test_Data.csv');
+[yfit, scores] = KNN_Model.predictFcn(data);
+```
+Here, data is the new dataset on which predictions are to be made. The output yfit contains the predicted class labels, and scores contains the confidence scores for each prediction.
+
+### Usage
++ Import the necessary CSV files and merge them into a single table.
++ Train the classification model using the merged table in the Classification Learner app.
++ Export the trained KNN model to the workspace.
++ Use the provided code to make predictions on new data.
+### Files
++ shorted_turns_fault.csv: Data for shorted turns faults.
++ normal_winding.csv: Data for normal winding conditions.
++ open_circuit_fault.csv: Data for open circuit faults.
++ inter_turn_fault_1.csv: Data for inter-turn faults (test 1).
++ inter_turn_fault_2.csv: Data for inter-turn faults (test 2).
++ Test_Data.csv: New data for prediction.
+### Requirements
+- MATLAB with the Statistics and Machine Learning Toolbox.
+- CSV files containing the winding fault data.
+
+This project demonstrates how to import, merge, and classify winding fault data using the KNN algorithm in MATLAB. The KNN model is selected based on its accuracy and is used to make predictions on new data.
