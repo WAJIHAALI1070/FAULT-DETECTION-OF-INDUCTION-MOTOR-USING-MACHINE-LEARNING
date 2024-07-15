@@ -54,10 +54,10 @@ data5 = readtable('D:\EM_Project\cracked_rotor_fault_3.csv');  % Read the CSV fi
 merged_table = vertcat(data1, data5, data4, data3, data2);
 ```
 
-### Model Training
+## Model Training
 The merged data table is then used to train a classification model using MATLAB's Classification Learner app. During this process, various models are tested, and the KNN model is found to offer the highest accuracy. The trained KNN model is exported to the MATLAB workspace as KNN_Model.
 
-### Model Prediction
+## Model Prediction
 To make predictions on new data using the trained KNN model, the following commands are used:
 ```matlab
 data = readtable('D:\EM_Project\Test_Data.csv');
@@ -65,19 +65,19 @@ data = readtable('D:\EM_Project\Test_Data.csv');
 ```
 Here, data is the new dataset on which predictions are to be made. The output yfit contains the predicted class labels, and scores contains the confidence scores for each prediction.
 
-### Usage
+## Usage
 -Import the necessary CSV files and merge them into a single table.
 - Train the classification model using the merged table in the Classification Learner app.
 - Export the trained KNN model to the workspace.
 - Use the provided code to make predictions on new data.
-### Files
+## Files
 - `broken_bar_fault.csv`: Data for broken bar faults.
 - `normal_rotor.csv`: Data for normal rotor conditions.
 - `cracked_rotor_fault_1.csv`: Data for cracked rotor faults (test 1).
 - `cracked_rotor_fault_2.csv`: Data for cracked rotor faults (test 2).
 - `cracked_rotor_fault_3.csv`: Data for cracked rotor faults (test 3).
 - `Test_Data.csv`: New data for prediction.
-### Requirements
+## Requirements
 - MATLAB with the Statistics and Machine Learning Toolbox.
 - CSV files containing the broken rotor fault data.
 
